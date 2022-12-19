@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
-export default function ModalScreen() {
+export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profile'>) {
      return (
           <View style={styles.container}>
-               <Text style={styles.title}>Modal</Text>
+               <Text style={styles.title}>Profile</Text>
           </View>
      );
 }

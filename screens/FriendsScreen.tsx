@@ -1,10 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '../components/Themed';
+import { RootTabScreenProps } from '../types';
 
-export default function ModalScreen() {
+export default function FriendsScreen({ navigation }: RootTabScreenProps<'Friends'>) {
      return (
           <View style={styles.container}>
-               <Text style={styles.title}>Modal</Text>
+               <Text style={styles.title}>Friends</Text>
           </View>
      );
 }
