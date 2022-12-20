@@ -12,16 +12,15 @@ export function AccountsInfo({ accounts }: accountsProps) {
      return (
           <View style={styles.container}>
                <View style={styles.accounts_container}>
+                    <Text style={styles.title}>Account</Text>
                     <Text style={styles.title}>Balance</Text>
-                    <Text style={styles.title}>Type</Text>
                </View>
                {accounts.map((data) => {
                     return (
                          <View key={data.balance} style={styles.accounts_container}>
-                              <Text style={styles.accounts_text}>{data.balance}</Text>
                               <Text
                                    style={
-                                        data.type === 'checking'
+                                        data.type === 'Checking'
                                              ? {
                                                     ...styles.accounts_text,
                                                     color: '#3d8ed4',
@@ -34,6 +33,7 @@ export function AccountsInfo({ accounts }: accountsProps) {
                               >
                                    {data.type}
                               </Text>
+                              <Text style={styles.accounts_text}>$ {data.balance}</Text>
                          </View>
                     );
                })}
