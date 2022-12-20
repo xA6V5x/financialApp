@@ -16,7 +16,7 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
                                    <View key={index} style={styles.transactions_container}>
                                         <Image
                                              source={
-                                                  data.type === 'deposit'
+                                                  data.type === 'Deposit'
                                                        ? require('../assets/transactions/received.png')
                                                        : require('../assets/transactions/send.png')
                                              }
