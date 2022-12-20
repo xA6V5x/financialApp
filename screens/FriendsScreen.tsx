@@ -2,6 +2,7 @@ import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
+import { Friend } from '../components/Friend';
 
 export default function FriendsScreen({ navigation }: RootTabScreenProps<'Friends'>) {
      const { friends } = dataTest;
@@ -11,10 +12,11 @@ export default function FriendsScreen({ navigation }: RootTabScreenProps<'Friend
                     <View style={styles.content_container}>
                          {friends.map((data) => {
                               return (
-                                   <View key={data.email} style={styles.friend_container}>
-                                        <Text style={styles.name}> {data.name} </Text>
-                                        <Text style={styles.email}> {data.email} </Text>
-                                   </View>
+                                   <Friend key={data.email} name={data.name} email={data.email} />
+                                   // <View key={data.email} style={styles.friend_container}>
+                                   //      <Text style={styles.name}> {data.name} </Text>
+                                   //      <Text style={styles.email}> {data.email} </Text>
+                                   // </View>
                               );
                          })}
                     </View>
