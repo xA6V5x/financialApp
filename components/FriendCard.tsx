@@ -6,7 +6,7 @@ type friendProps = {
      email: string;
 };
 
-export function Friend({ name, email }: friendProps) {
+export function FriendCard({ name, email }: friendProps) {
      return (
           <View key={email} style={styles.container}>
                <Text style={styles.name}> {name} </Text>
