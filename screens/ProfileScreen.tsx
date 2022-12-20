@@ -2,23 +2,34 @@ import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
+import { UserData } from '../components/UserData';
+
+type userProps = {
+     name: string;
+     email: string;
+     accounts: {
+          type: string;
+          balance: number;
+     }[];
+};
 
 export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profile'>) {
-     const { user } = dataTest;
+     const { name, email, accounts }: userProps = dataTest.user;
 
      return (
           <SafeAreaView style={styles.container}>
                <ScrollView style={styles.scroll}>
                     <View style={styles.content_container}>
-                         <View style={styles.user_container}>
+                         <UserData name={name} email={email} />
+                         {/* <View style={styles.user_container}>
                               <Text style={styles.user_data}>{user.name}</Text>
                               <Text style={styles.user_data}>{user.email}</Text>
-                         </View>
+                         </View> */}
                          <View style={styles.accounts_titles}>
                               <Text style={styles.title}>Balance</Text>
                               <Text style={styles.title}>Type</Text>
                          </View>
-                         {user.accounts.map((data) => {
+                         {accounts.map((data) => {
                               return (
                                    <View key={data.balance} style={styles.user_accounts}>
                                         <Text style={styles.accounts_text}>{data.balance}</Text>
