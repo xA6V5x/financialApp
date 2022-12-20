@@ -1,0 +1,44 @@
+{
+     "user": {
+          "name": "John Doe",
+          "email": "johndoe@gmail.com",
+          "accounts": [
+               {
+                    "type": "checking",
+                    "balance": 1000.5
+               },
+               {
+                    "type": "savings",
+                    "balance": 2500.0
+               }
+          ]
+     },
+     "transactions": [
+          {
+               "type": "deposit",
+               "amount": 500.0,
+               "account": "checking"
+          },
+          {
+               "type": "withdrawal",
+               "amount": 100.0,
+               "account": "savings"
+          },
+          {
+               "type": "transfer",
+               "amount": 200.0,
+               "fromAccount": "checking",
+               "toAccount": "savings"
+          }
+     ],
+     "friends": [
+          {
+               "name": "Jane Smith",
+               "email": "janesmith@gmail.com"
+          },
+          {
+               "name": "Bob Johnson",
+               "email": "bobjohnson@gmail.com"
+          }
+     ]
+}

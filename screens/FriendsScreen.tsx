@@ -1,28 +1,50 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
+import dataTest from '../dataTest.json';
 
 export default function FriendsScreen({ navigation }: RootTabScreenProps<'Friends'>) {
+     const { friends } = dataTest;
      return (
-          <View style={styles.container}>
-               <Text style={styles.title}>Friends</Text>
-          </View>
+          <SafeAreaView style={styles.container}>
+               <ScrollView style={styles.scroll}>
+                    <View style={styles.content_container}>
+                         {friends.map((data) => {
+                              return (
+                                   <View key={data.email} style={styles.friend_container}>
+                                        <Text style={styles.name}> {data.name} </Text>
+                                        <Text style={styles.email}> {data.email} </Text>
+                                   </View>
+                              );
+                         })}
+                    </View>
+               </ScrollView>
+          </SafeAreaView>
      );
 }
 
 const styles = StyleSheet.create({
      container: {
           flex: 1,
+     },
+     scroll: {
+          flex: 1,
+          backgroundColor: '#ffff',
+     },
+     content_container: {
+          width: '100%',
           alignItems: 'center',
-          justifyContent: 'center',
      },
-     title: {
-          fontSize: 20,
-          fontWeight: 'bold',
+     friend_container: {
+          margin: 5,
+          width: '90%',
+          padding: 15,
+          borderRadius: 10,
+          backgroundColor: '#ECECEC',
      },
-     separator: {
-          marginVertical: 30,
-          height: 1,
-          width: '80%',
+     name: {
+          fontSize: 16,
+          fontWeight: '500',
      },
+     email: { paddingLeft: 10, fontSize: 15 },
 });
