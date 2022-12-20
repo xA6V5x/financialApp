@@ -13,10 +13,6 @@ export default function FriendsScreen({ navigation }: RootTabScreenProps<'Friend
                          {friends.map((data) => {
                               return (
                                    <Friend key={data.email} name={data.name} email={data.email} />
-                                   // <View key={data.email} style={styles.friend_container}>
-                                   //      <Text style={styles.name}> {data.name} </Text>
-                                   //      <Text style={styles.email}> {data.email} </Text>
-                                   // </View>
                               );
                          })}
                     </View>
@@ -37,16 +33,4 @@ const styles = StyleSheet.create({
           width: '100%',
           alignItems: 'center',
      },
-     friend_container: {
-          margin: 5,
-          width: '90%',
-          padding: 15,
-          borderRadius: 10,
-          backgroundColor: '#ECECEC',
-     },
-     name: {
-          fontSize: 16,
-          fontWeight: '500',
-     },
-     email: { paddingLeft: 10, fontSize: 15 },
 });
