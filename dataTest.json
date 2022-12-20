@@ -4,31 +4,31 @@
           "email": "johndoe@gmail.com",
           "accounts": [
                {
-                    "type": "checking",
+                    "type": "Checking",
                     "balance": 1000.5
                },
                {
-                    "type": "savings",
+                    "type": "Savings",
                     "balance": 2500.0
                }
           ]
      },
      "transactions": [
           {
-               "type": "deposit",
+               "type": "Deposit",
                "amount": 500.0,
-               "account": "checking"
+               "account": "Checking"
           },
           {
-               "type": "withdrawal",
+               "type": "Withdrawal",
                "amount": 100.0,
-               "account": "savings"
+               "account": "Savings"
           },
           {
-               "type": "transfer",
+               "type": "Transfer",
                "amount": 200.0,
-               "fromAccount": "checking",
-               "toAccount": "savings"
+               "fromAccount": "Checking",
+               "toAccount": "Savings"
           }
      ],
      "friends": [
