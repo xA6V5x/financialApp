@@ -18,9 +18,18 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
                                              source={
                                                   data.type === 'Deposit'
                                                        ? require('../assets/transactions/received.png')
+                                                       : data.type === 'Transfer'
+                                                       ? require('../assets/transactions/internal.png')
                                                        : require('../assets/transactions/send.png')
                                              }
-                                             style={{ margin: 15, width: 35, height: 35 }}
+                                             style={
+                                                  data.type === 'transaction'
+                                                       ? {
+                                                              ...styles.img_transaction,
+                                                              borderRadius: '50%',
+                                                         }
+                                                       : styles.img_transaction
+                                             }
                                         />
                                         <View style={{ backgroundColor: '#ECECEC' }}>
                                              <Text style={styles.text}>
@@ -74,6 +83,7 @@ const styles = StyleSheet.create({
           width: '100%',
           backgroundColor: '#ECECEC',
      },
+     img_transaction: { margin: 15, width: 35, height: 35 },
      text: {
           fontSize: 15,
           fontWeight: '500',
