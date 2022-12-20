@@ -8,7 +8,7 @@ type friendProps = {
 
 export function Friend({ name, email }: friendProps) {
      return (
-          <View key={email} style={styles.friend_container}>
+          <View key={email} style={styles.container}>
                <Text style={styles.name}> {name} </Text>
                <Text style={styles.email}> {email} </Text>
           </View>
@@ -17,17 +17,6 @@ export function Friend({ name, email }: friendProps) {
 
 const styles = StyleSheet.create({
      container: {
-          flex: 1,
-     },
-     scroll: {
-          flex: 1,
-          backgroundColor: '#ffff',
-     },
-     content_container: {
-          width: '100%',
-          alignItems: 'center',
-     },
-     friend_container: {
           margin: 5,
           width: '90%',
           padding: 15,
