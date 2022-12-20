@@ -3,6 +3,7 @@ import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
 import { UserData } from '../components/UserData';
+import { AccountsInfo } from '../components/AccountsInfo';
 
 type userProps = {
      name: string;
@@ -25,7 +26,8 @@ export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profil
                               <Text style={styles.user_data}>{user.name}</Text>
                               <Text style={styles.user_data}>{user.email}</Text>
                          </View> */}
-                         <View style={styles.accounts_titles}>
+                         <AccountsInfo accounts={accounts} />
+                         {/* <View style={styles.accounts_titles}>
                               <Text style={styles.title}>Balance</Text>
                               <Text style={styles.title}>Type</Text>
                          </View>
@@ -50,7 +52,7 @@ export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profil
                                         </Text>
                                    </View>
                               );
-                         })}
+                         })} */}
                     </View>
                </ScrollView>
           </SafeAreaView>
