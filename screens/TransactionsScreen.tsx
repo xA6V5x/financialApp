@@ -3,6 +3,7 @@ import { StyleSheet, Image } from 'react-native';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
+import { TransactionCard } from '../components/TransactionCard';
 
 export default function TransactionsScreen({ navigation }: RootTabScreenProps<'Transactions'>) {
      const { transactions } = dataTest;
@@ -13,28 +14,35 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
                     <View style={styles.content_container}>
                          {transactions.map((data, index) => {
                               return (
-                                   <View key={index} style={styles.transactions_container}>
-                                        <Image
-                                             source={
-                                                  data.type === 'Deposit'
-                                                       ? require('../assets/transactions/received.png')
-                                                       : require('../assets/transactions/send.png')
-                                             }
-                                             style={styles.img_transaction}
-                                        />
-                                        <View style={{ backgroundColor: '#ECECEC' }}>
-                                             <Text style={styles.text}>
-                                                  {data.type} ${data.amount}
-                                             </Text>
-                                             {data.account && <Text>Account {data.account}</Text>}
-                                             {data.fromAccount && (
-                                                  <Text>From Account: {data.fromAccount}</Text>
-                                             )}
-                                             {data.fromAccount && (
-                                                  <Text>To Account: {data.toAccount}</Text>
-                                             )}
-                                        </View>
-                                   </View>
+                                   <TransactionCard
+                                        type={data.type}
+                                        amount={data.amount}
+                                        account={data.account}
+                                        fromAccount={data.fromAccount}
+                                        toAccount={data.toAccount}
+                                   />
+                                   // <View key={index} style={styles.transactions_container}>
+                                   //      <Image
+                                   //           source={
+                                   //                data.type === 'Deposit'
+                                   //                     ? require('../assets/transactions/received.png')
+                                   //                     : require('../assets/transactions/send.png')
+                                   //           }
+                                   //           style={styles.img_transaction}
+                                   //      />
+                                   //      <View style={{ backgroundColor: '#ECECEC' }}>
+                                   //           <Text style={styles.text}>
+                                   //                {data.type} ${data.amount}
+                                   //           </Text>
+                                   //           {data.account && <Text>Account {data.account}</Text>}
+                                   //           {data.fromAccount && (
+                                   //                <Text>From Account: {data.fromAccount}</Text>
+                                   //           )}
+                                   //           {data.fromAccount && (
+                                   //                <Text>To Account: {data.toAccount}</Text>
+                                   //           )}
+                                   //      </View>
+                                   // </View>
                               );
                          })}
                     </View>
