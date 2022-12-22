@@ -14,6 +14,7 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
                          {transactions.map((data, index) => {
                               return (
                                    <TransactionCard
+                                        key={index}
                                         type={data.type}
                                         amount={data.amount}
                                         account={data.account}
