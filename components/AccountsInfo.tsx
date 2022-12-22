@@ -20,22 +20,7 @@ export function AccountsInfo({ accounts }: accountsProps) {
                     return (
                          <View key={index} style={styles.accounts_container}>
                               <AccountName accountName={data.type} />
-                              {/* <Text
-                                   style={
-                                        data.type === 'Checking'
-                                             ? {
-                                                    ...styles.accounts_text,
-                                                    color: '#3d8ed4',
-                                               }
-                                             : {
-                                                    ...styles.accounts_text,
-                                                    color: '#3dd456',
-                                               }
-                                   }
-                              >
-                                   {data.type}
-                              </Text> */}
-                              <Text style={styles.accounts_text}>$ {data.balance}</Text>
+                              <Text style={styles.accounts_balance}>$ {data.balance}</Text>
                          </View>
                     );
                })}
@@ -56,7 +41,7 @@ const styles = StyleSheet.create({
           fontSize: 18,
           fontWeight: '500',
      },
-     accounts_text: {
+     accounts_balance: {
           paddingTop: 10,
           fontSize: 16,
      },
