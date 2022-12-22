@@ -15,20 +15,20 @@ Use any UI library framework for that. Besides practicing in decomposition, itâ€
 
 ## UI Result
 
-### Friends Screen
+### - Friends Screen
 
 <p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/src/assets/screensReadme/friendsScreen.png" />
+  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/assets/screensReadme/friendsScreen.png" />
 </p>
 
-### Transactions Screen
+### - Transactions Screen
 
 <p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/src/assets/screensReadme/transactionsScreen.png" />
+  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/assets/screensReadme/transactionsScreen.png" />
 </p>
 
-### User Profile Screen
+### - User Profile Screen
 
 <p align="center">
-  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/src/assets/screensReadme/profileScreen.png" />
+  <img height="300" src="https://raw.githubusercontent.com/xA6V5x/financialApp/main/assets/screensReadme/profileScreen.png" />
 </p>
