@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { AccountName } from './AccountName';
 import { Text, View } from './Themed';
 
 type accountsProps = {
@@ -18,7 +19,8 @@ export function AccountsInfo({ accounts }: accountsProps) {
                {accounts.map((data, index) => {
                     return (
                          <View key={index} style={styles.accounts_container}>
-                              <Text
+                              <AccountName accountName={data.type} />
+                              {/* <Text
                                    style={
                                         data.type === 'Checking'
                                              ? {
@@ -32,7 +34,7 @@ export function AccountsInfo({ accounts }: accountsProps) {
                                    }
                               >
                                    {data.type}
-                              </Text>
+                              </Text> */}
                               <Text style={styles.accounts_text}>$ {data.balance}</Text>
                          </View>
                     );
