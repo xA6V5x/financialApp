@@ -15,9 +15,9 @@ export function AccountsInfo({ accounts }: accountsProps) {
                     <Text style={styles.title}>Account</Text>
                     <Text style={styles.title}>Balance</Text>
                </View>
-               {accounts.map((data) => {
+               {accounts.map((data, index) => {
                     return (
-                         <View key={data.balance} style={styles.accounts_container}>
+                         <View key={index} style={styles.accounts_container}>
                               <Text
                                    style={
                                         data.type === 'Checking'
