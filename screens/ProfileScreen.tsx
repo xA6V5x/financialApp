@@ -1,5 +1,5 @@
-import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
-import { Text, View } from '../components/Themed';
+import { StyleSheet, ScrollView } from 'react-native';
+import { View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
 import { UserData } from '../components/UserData';
