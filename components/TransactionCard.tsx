@@ -1,5 +1,4 @@
-import { Image, Text, View, StyleSheet } from 'react-native';
-import { AccountName } from './AccountName';
+import { Image, View, StyleSheet } from 'react-native';
 import { TransactionInfo } from './TransactionInfo';
 
 type transactionCardProps = {
