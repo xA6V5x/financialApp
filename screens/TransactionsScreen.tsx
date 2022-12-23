@@ -1,4 +1,4 @@
-import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, ScrollView } from 'react-native';
 import { View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { TransactionCard } from '../components/TransactionCard';
