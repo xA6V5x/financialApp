@@ -18,21 +18,16 @@ export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profil
      const { name, email, accounts }: userProps = dataTest.user;
 
      return (
-          <SafeAreaView style={styles.container}>
-               <ScrollView style={styles.scroll}>
-                    <View style={styles.content_container}>
-                         <UserData name={name} email={email} />
-                         <AccountsInfo accounts={accounts} />
-                    </View>
-               </ScrollView>
-          </SafeAreaView>
+          <ScrollView style={styles.scroll}>
+               <View style={styles.content_container}>
+                    <UserData name={name} email={email} />
+                    <AccountsInfo accounts={accounts} />
+               </View>
+          </ScrollView>
      );
 }
 
 const styles = StyleSheet.create({
-     container: {
-          flex: 1,
-     },
      scroll: {
           flex: 1,
           backgroundColor: '#ffff',
