@@ -8,31 +8,26 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
      const { transactions } = dataTest;
 
      return (
-          <SafeAreaView style={styles.container}>
-               <ScrollView style={styles.scroll}>
-                    <View style={styles.content_container}>
-                         {transactions.map((data, index) => {
-                              return (
-                                   <TransactionCard
-                                        key={index}
-                                        type={data.type}
-                                        amount={data.amount}
-                                        account={data.account}
-                                        fromAccount={data.fromAccount}
-                                        toAccount={data.toAccount}
-                                   />
-                              );
-                         })}
-                    </View>
-               </ScrollView>
-          </SafeAreaView>
+          <ScrollView style={styles.scroll}>
+               <View style={styles.content_container}>
+                    {transactions.map((data, index) => {
+                         return (
+                              <TransactionCard
+                                   key={index}
+                                   type={data.type}
+                                   amount={data.amount}
+                                   account={data.account}
+                                   fromAccount={data.fromAccount}
+                                   toAccount={data.toAccount}
+                              />
+                         );
+                    })}
+               </View>
+          </ScrollView>
      );
 }
 
 const styles = StyleSheet.create({
-     container: {
-          flex: 1,
-     },
      scroll: {
           flex: 1,
           backgroundColor: '#ffff',
