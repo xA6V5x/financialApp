@@ -2,14 +2,14 @@ import { StyleSheet } from 'react-native';
 import { AccountName } from './AccountName';
 import { Text, View } from './Themed';
 
-type accountsProps = {
+type AccountsInfoProps = {
      accounts: {
           type: string;
           balance: number;
      }[];
 };
 
-export function AccountsInfo({ accounts }: accountsProps) {
+export function AccountsInfo({ accounts }: AccountsInfoProps) {
      return (
           <View style={styles.container}>
                <View style={styles.accounts_container}>

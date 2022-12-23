@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from './Themed';
 
-type userDataProps = {
+type UserDataProps = {
      name: string;
      email: string;
 };
 
-export function UserData({ name, email }: userDataProps) {
+export function UserData({ name, email }: UserDataProps) {
      return (
           <View key={email} style={styles.container}>
                <Text style={styles.user_data}> {name} </Text>

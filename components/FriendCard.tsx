@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from './Themed';
 
-type friendProps = {
+type FriendCardProps = {
      name: string;
      email: string;
 };
 
-export function FriendCard({ name, email }: friendProps) {
+export function FriendCard({ name, email }: FriendCardProps) {
      return (
           <View key={email} style={styles.container}>
                <Text style={styles.name}> {name} </Text>

@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from './Themed';
 
-type accountNameProps = {
+type AccountNameProps = {
      accountName: string;
 };
 
-export function AccountName({ accountName }: accountNameProps) {
+export function AccountName({ accountName }: AccountNameProps) {
      return (
           <Text
                style={

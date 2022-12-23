@@ -1,7 +1,7 @@
 import { Image, View, StyleSheet } from 'react-native';
 import { TransactionInfo } from './TransactionInfo';
 
-type transactionCardProps = {
+type TransactionCardProps = {
      type: string;
      amount: number;
      account?: string;
@@ -15,7 +15,7 @@ export function TransactionCard({
      account,
      fromAccount,
      toAccount,
-}: transactionCardProps) {
+}: TransactionCardProps) {
      return (
           <View style={styles.transactions_container}>
                <Image
