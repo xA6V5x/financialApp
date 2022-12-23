@@ -1,5 +1,6 @@
 import { Image, Text, View, StyleSheet } from 'react-native';
 import { AccountName } from './AccountName';
+import { TransactionInfo } from './TransactionInfo';
 
 type transactionCardProps = {
      type: string;
@@ -26,26 +27,13 @@ export function TransactionCard({
                     }
                     style={styles.img_transaction}
                />
-               <View style={{ backgroundColor: '#ECECEC' }}>
-                    <Text style={{ ...styles.text, fontWeight: '500' }}>
-                         {type} ${amount}
-                    </Text>
-                    {account && (
-                         <Text style={styles.text}>
-                              Account: <AccountName accountName={account} />
-                         </Text>
-                    )}
-                    {fromAccount && (
-                         <Text style={styles.text}>
-                              From Account: <AccountName accountName={fromAccount} />
-                         </Text>
-                    )}
-                    {toAccount && (
-                         <Text style={styles.text}>
-                              To Account: <AccountName accountName={toAccount} />
-                         </Text>
-                    )}
-               </View>
+               <TransactionInfo
+                    type={type}
+                    amount={amount}
+                    account={account}
+                    fromAccount={fromAccount}
+                    toAccount={toAccount}
+               />
           </View>
      );
 }
@@ -60,7 +48,4 @@ const styles = StyleSheet.create({
           backgroundColor: '#ECECEC',
      },
      img_transaction: { margin: 20, width: 35, height: 35 },
-     text: {
-          fontSize: 15,
-     },
 });
