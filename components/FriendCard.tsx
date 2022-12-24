@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from './Themed';
+import { StyleSheet, Text } from 'react-native';
+import { View } from './Themed';
 
 type FriendCardProps = {
      name: string;
