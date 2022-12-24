@@ -30,7 +30,6 @@ export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profil
 const styles = StyleSheet.create({
      scroll: {
           flex: 1,
-          backgroundColor: '#ffff',
      },
      content_container: {
           width: '100%',

@@ -30,7 +30,6 @@ export default function TransactionsScreen({ navigation }: RootTabScreenProps<'T
 const styles = StyleSheet.create({
      scroll: {
           flex: 1,
-          backgroundColor: '#ffff',
      },
      content_container: {
           width: '100%',
