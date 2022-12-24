@@ -1,5 +1,5 @@
-import { StyleSheet, ScrollView } from 'react-native';
-import { View } from '../components/Themed';
+import { StyleSheet } from 'react-native';
+import { View, ScrollView } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import dataTest from '../dataTest.json';
 import { FriendCard } from '../components/FriendCard';
@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
      },
      scroll: {
           flex: 1,
-          backgroundColor: '#ffff',
      },
      content_container: {
           width: '100%',

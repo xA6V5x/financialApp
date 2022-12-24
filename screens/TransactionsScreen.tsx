@@ -1,5 +1,5 @@
-import { StyleSheet, ScrollView } from 'react-native';
-import { View } from '../components/Themed';
+import { StyleSheet } from 'react-native';
+import { View, ScrollView } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import { TransactionCard } from '../components/TransactionCard';
 import dataTest from '../dataTest.json';
